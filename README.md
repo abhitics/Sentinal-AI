@@ -23,26 +23,26 @@ graph TD
     classDef storage fill:#64748b,stroke:#334155,stroke-width:2px,color:#fff;
 
     %% Nodes
-    A(👤 User / Client browser):::frontend
-    B[💻 Next.js Frontend UI]:::frontend
-    C{⚙️ Node.js Express Backend <br/> Port: 5000}:::backend
-    D{🧠 Flask AI API <br/> Port: 5001}:::ai
-    E[👁️ YOLO Vision Model <br/> main.py]:::ai
-    F[(💾 Local File System)]:::storage
+    A("👤 User / Client browser"):::frontend
+    B["💻 Next.js Frontend UI"]:::frontend
+    C{"⚙️ Node.js Express Backend Port: 5000"}:::backend
+    D{"🧠 Flask AI API Port: 5001"}:::ai
+    E["👁️ YOLO Vision Model main.py"]:::ai
+    F[("💾 Local File System")]:::storage
 
     %% Flow
-    A -->|1. Drags & Drops Image| B
-    B -->|2. POST /detect (Multipart)| C
-    C -->|3. Temporarily saves image| F
-    C -->|4. Forwards Image (FormData)| D
-    D -->|5. Passes to YOLO Model| E
-    E -->|6. Draws Bounding Boxes| F
-    E -->|7. Calculates Score & Label| D
-    D -->|8. Returns JSON Metadata| C
-    C -->|9. Relays Data back to Client| B
-    B -->|10. Fetches annotated image <br/> GET /output.jpg| C
-    C -->|11. Reads from disk| F
-    B -->|12. Displays Dashboard Results| A
+    A -->|"1. Drags & Drops Image"| B
+    B -->|"2. POST /detect (Multipart)"| C
+    C -->|"3. Temporarily saves image"| F
+    C -->|"4. Forwards Image (FormData)"| D
+    D -->|"5. Passes to YOLO Model"| E
+    E -->|"6. Draws Bounding Boxes"| F
+    E -->|"7. Calculates Score & Label"| D
+    D -->|"8. Returns JSON Metadata"| C
+    C -->|"9. Relays Data back to Client"| B
+    B -->|"10. Fetches annotated image GET /output.jpg"| C
+    C -->|"11. Reads from disk"| F
+    B -->|"12. Displays Dashboard Results"| A
 ```
 
 ## ✨ Key Features
