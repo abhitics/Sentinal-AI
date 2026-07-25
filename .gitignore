@@ -9,3 +9,4 @@ uploads/
 output.jpg
 input.jpg
 *.jpg
+push_to_github.bat
